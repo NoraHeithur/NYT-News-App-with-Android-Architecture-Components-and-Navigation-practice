@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/filter_chip_group"
+        style="@style/Widget.MaterialComponents.ChipGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:layout_constraintGuide_begin="16dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:layout_constraintGuide_begin="200dp" />
+
+            <!-- TODO add function that checking state -->
+            <!-- TODO -> if (checked = true) chipIconVisible = true else false  -->
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_1_default"
+                style="@style/Widget.NYTNewsApp.FilterChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_label_default"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_2_art"
+                style="@style/Widget.NYTNewsApp.FilterChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_label_arts"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@id/chip_1_default" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_3_automobile"
+                style="@style/Widget.NYTNewsApp.FilterChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_label_automobiles"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/chip_2_art" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_4_book"
+                style="@style/Widget.NYTNewsApp.FilterChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_label_books"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/chip_3_automobile" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_5_business"
+                style="@style/Widget.NYTNewsApp.FilterChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_label_business"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/chip_4_book" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_6_fashion"
+                style="@style/Widget.NYTNewsApp.FilterChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_label_fashion"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/chip_5_business" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_7_food"
+                style="@style/Widget.NYTNewsApp.FilterChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_label_food"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/chip_6_fashion" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_8_health"
+                style="@style/Widget.NYTNewsApp.FilterChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_label_health"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/chip_7_food" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_9_insider"
+                style="@style/Widget.NYTNewsApp.FilterChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_label_insider"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/chip_8_health" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_10_magazine"
+                style="@style/Widget.NYTNewsApp.FilterChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_label_magazine"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/chip_9_insider" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_11_movies"
+                style="@style/Widget.NYTNewsApp.FilterChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_label_movies"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/chip_10_magazine" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_12_new_york"
+                style="@style/Widget.NYTNewsApp.FilterChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_label_new_york"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/chip_11_movies" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_13_obituary"
+                style="@style/Widget.NYTNewsApp.FilterChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_label_obituaries"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/chip_12_new_york" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_14_opinion"
+                style="@style/Widget.NYTNewsApp.FilterChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_label_opinion"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_15_politics"
+                style="@style/Widget.NYTNewsApp.FilterChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_label_politics"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+                app:layout_constraintTop_toBottomOf="@+id/chip_14_opinion" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_16_real_estate"
+                style="@style/Widget.NYTNewsApp.FilterChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_label_real_estate"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+                app:layout_constraintTop_toBottomOf="@+id/chip_15_politics" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_17_science"
+                style="@style/Widget.NYTNewsApp.FilterChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_label_science"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+                app:layout_constraintTop_toBottomOf="@+id/chip_16_real_estate" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_18_sport"
+                style="@style/Widget.NYTNewsApp.FilterChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_label_sports"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+                app:layout_constraintTop_toBottomOf="@+id/chip_17_science" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_19_sunday_review"
+                style="@style/Widget.NYTNewsApp.FilterChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_label_sunday_review"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+                app:layout_constraintTop_toBottomOf="@+id/chip_18_sport" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_20_technology"
+                style="@style/Widget.NYTNewsApp.FilterChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_label_technology"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+                app:layout_constraintTop_toBottomOf="@+id/chip_19_sunday_review" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_21_theater"
+                style="@style/Widget.NYTNewsApp.FilterChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_label_theater"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+                app:layout_constraintTop_toBottomOf="@+id/chip_20_technology" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_22_t_magazine"
+                style="@style/Widget.NYTNewsApp.FilterChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_label_t_magazine"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+                app:layout_constraintTop_toBottomOf="@+id/chip_21_theater" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_23_travel"
+                style="@style/Widget.NYTNewsApp.FilterChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_label_travel"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+                app:layout_constraintTop_toBottomOf="@+id/chip_22_t_magazine" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_24_upshot"
+                style="@style/Widget.NYTNewsApp.FilterChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_label_upshot"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+                app:layout_constraintTop_toBottomOf="@+id/chip_23_travel" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_25_us"
+                style="@style/Widget.NYTNewsApp.FilterChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_label_u_s"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+                app:layout_constraintTop_toBottomOf="@+id/chip_24_upshot" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_26_world"
+                style="@style/Widget.NYTNewsApp.FilterChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_label_world"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+                app:layout_constraintTop_toBottomOf="@+id/chip_25_us" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.chip.ChipGroup>
+</layout>

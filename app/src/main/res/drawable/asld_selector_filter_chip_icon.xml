@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/filter_chip_check"
+        android:drawable="@drawable/ic_filter_chip_check"
+        android:state_checked="true" />
+    <item
+        android:id="@+id/filter_chip_dot"
+        android:drawable="@drawable/ic_filter_chip_dot" />
+
+    <transition
+        android:fromId="@id/filter_chip_dot"
+        android:toId="@id/filter_chip_check"
+        android:drawable="@drawable/avd_filter_chip_icon_to_checked" />
+
+    <transition
+        android:fromId="@id/filter_chip_check"
+        android:toId="@id/filter_chip_dot"
+        android:drawable="@drawable/avd_filter_chip_icon_to_dot" />
+
+</animated-selector>

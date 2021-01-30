@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="savedStory"
+            type="com.nora.nytnewsapps.data.database.DatabaseStory" />
+
+        <variable
+            name="onItemClickListener"
+            type="com.nora.nytnewsapps.presentation.screens.saved.SavedStoryOnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> onItemClickListener.onClick(savedStory)}"
+        android:padding="@dimen/spacing_small">
+
+        <ImageView
+            android:id="@+id/iv_item_save"
+            android:layout_width="@dimen/image_item_save_size"
+            android:layout_height="@dimen/image_item_save_size"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:setArticleImage="@{savedStory.url}"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/tv_item_save_title"
+            style="@style/TextAppearance.NYTNewsApp.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_small"
+            android:text="@{savedStory.title}"
+            app:layout_constraintEnd_toStartOf="@id/iv_item_save"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginEnd="0dp"
+            tools:text="@string/item_list_label__text_title_long" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_section_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_save_title">
+
+            <TextView
+                android:id="@+id/tv_item_save_section"
+                style="@style/TextAppearance.NYTNewsApp.caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{savedStory.section}"
+                app:layout_constraintEnd_toStartOf="@+id/tv_item_save_date"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/item_list_label_section" />
+
+            <TextView
+                android:id="@+id/tv_item_save_date"
+                style="@style/TextAppearance.NYTNewsApp.caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_normal"
+                app:layout_constraintStart_toEndOf="@+id/tv_item_save_section"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/item_list_label_time" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

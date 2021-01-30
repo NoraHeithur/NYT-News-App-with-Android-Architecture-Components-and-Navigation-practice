@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Dialog -->
+    <style name="AlertDialog.NYTNewsApp.Title" parent="MaterialAlertDialog.MaterialComponents.Title.Text">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textSize">@dimen/text_size_title</item>
+    </style>
+
+    <style name="AlertDialog.NYTNewsApp.BodyText" parent="MaterialAlertDialog.MaterialComponents.Body.Text">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textSize">@dimen/text_size_body</item>
+    </style>
+
+    <style name="AlertDialog.NYTNewsApp.ShapeAppearance" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">4dp</item>
+    </style>
+
+    <style name="AlertDialog.NYTNewsApp.Style" parent="MaterialAlertDialog.MaterialComponents">
+        <item name="shapeAppearance">@style/AlertDialog.NYTNewsApp.ShapeAppearance</item>
+    </style>
+
+    <!-- Text Appearances -->
+    <!-- Base Font -->
+    <style name="TextAppearance.NYTNewsApp.Text" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <!-- News Detail Title -->
+    <style name="TextAppearance.NYTNewsApp.Header" parent="TextAppearance.NYTNewsApp.Text">
+        <item name="android:textSize">@dimen/text_size_header</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <!-- Title, Appbar, Drawer header -->
+    <style name="TextAppearance.NYTNewsApp.Title" parent="TextAppearance.NYTNewsApp.Text">
+        <item name="android:textSize">@dimen/text_size_title</item>
+        <item name="android:letterSpacing">0.013</item>
+    </style>
+
+    <!-- Subtitle -->
+    <style name="TextAppearance.NYTNewsApp.Subtitle" parent="TextAppearance.NYTNewsApp.Text">
+        <item name="android:textSize">@dimen/text_size_subtitle</item>
+        <item name="android:letterSpacing">0.012</item>
+    </style>
+
+    <!-- Body, Detail -->
+    <style name="TextAppearance.NYTNewsApp.Body" parent="TextAppearance.NYTNewsApp.Text">
+        <item name="android:textSize">@dimen/text_size_body</item>
+        <item name="android:letterSpacing">0.009</item>
+    </style>
+
+    <!-- Small body, Abstract, Small detail -->
+    <style name="TextAppearance.NYTNewsApp.Body_Small" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textSize">@dimen/text_size_body_small</item>
+        <item name="android:letterSpacing">0.0007</item>
+    </style>
+
+    <!-- Drawer header text -->
+    <style name="TextAppearance.NYTNewsApp.Drawer_Header_Text" parent="TextAppearance.NYTNewsApp.Body_Small">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Section, Date, Time -->
+    <style name="TextAppearance.NYTNewsApp.caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textSize">@dimen/text_size_caption</item>
+        <item name="android:letterSpacing">0.0005</item>
+    </style>
+
+    <!-- Datail Date, Time -->
+    <style name="TextAppearance.NYTNewsApp.caption_big" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textSize">@dimen/text_size_body_small</item>
+        <item name="android:letterSpacing">0.0007</item>
+    </style>
+
+    <style name="TextAppearance.NYTNewsApp.overline" parent="TextAppearance.MaterialComponents.Overline">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textSize">@dimen/text_size_overline</item>
+        <item name="android:letterSpacing">0.00013</item>
+    </style>
+
+    <!-- Action mode -->
+    <style name="TextAppearance.NYTNewsApp.overline.action" parent="TextAppearance.MaterialComponents.Overline">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textSize">@dimen/text_size_overline</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:letterSpacing">0.00013</item>
+    </style>
+
+    <!-- Filter Chip -->
+    <style name="TextAppearance.NYTNewsApp.FilterChip.Selected" parent="TextAppearance.NYTNewsApp.Body_Small">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Button -->
+    <style name="TextAppearance.NYTNewsApp.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <!-- Filter Chip -->
+    <style name="Widget.NYTNewsApp.FilterChip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="android:textAppearance">@style/TextAppearance.NYTNewsApp.FilterChip.Selected</item>
+        <item name="chipBackgroundColor">@color/custom_mtrl_chip_background</item>
+        <item name="chipIcon">@drawable/asld_selector_filter_chip_icon</item>
+        <item name="chipIconTint">@color/custom_mtrl_chip_icon_tint</item>
+        <item name="chipStrokeColor">@color/custom_mtrl_chip_stroke</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="chipEndPadding">@dimen/spacing_small</item>
+    </style>
+
+    <style name="Widget.NYTNewsApp.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">@dimen/spacing_small</item>
+        <item name="cardElevation">@dimen/elevation_normal</item>
+        <item name="cardPreventCornerOverlap">true</item>
+    </style>
+</resources>

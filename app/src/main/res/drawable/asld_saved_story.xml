@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/ic_save_empty"
+        android:drawable="@drawable/ic_saved" />
+
+    <item
+        android:id="@+id/ic_save_filled"
+        android:drawable="@drawable/ic_saved_fill"
+        android:state_checked="true" />
+
+    <transition
+        android:drawable="@drawable/avd_save_filled"
+        android:fromId="@+id/ic_save_empty"
+        android:toId="@+id/ic_save_filled" />
+
+    <transition
+        android:drawable="@drawable/avd_save_empty"
+        android:fromId="@+id/ic_save_filled"
+        android:toId="@+id/ic_save_empty" />
+
+</animated-selector>

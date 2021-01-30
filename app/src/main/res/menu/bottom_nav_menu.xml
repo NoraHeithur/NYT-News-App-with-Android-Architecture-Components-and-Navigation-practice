@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/nav_graph_today"
+        android:title="@string/bottom_nav_label_today"
+        android:icon="@drawable/ic_feeds" />
+
+    <item android:id="@+id/nav_graph_saved"
+        android:title="@string/bottom_nav_label_saved"
+        android:icon="@drawable/ic_saved" />
+
+    <item android:id="@+id/nav_graph_about_me"
+        android:title="@string/bottom_nav_label_about_me"
+        android:icon="@drawable/ic_profile" />
+</menu>

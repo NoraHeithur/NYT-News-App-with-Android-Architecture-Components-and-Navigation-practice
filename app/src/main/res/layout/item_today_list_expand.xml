@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data android:layout_height="match_parent">
+
+        <variable
+            name="articleExpanded"
+            type="com.nora.nytnewsapps.data.network.StoryExpendedArticle" />
+
+        <variable
+            name="onItemClickListener"
+            type="com.nora.nytnewsapps.presentation.screens.today.TodayItemOnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> onItemClickListener.onItemExpandedClick(articleExpanded)}">
+
+        <ImageView
+            android:id="@+id/iv_item_feeds"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/image_item_feeds_size"
+            android:contentDescription="@string/description_label_feeds_item_list_image"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:setArticleImage="@{articleExpanded.imageUrl}"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/text_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_item_feeds">
+
+            <TextView
+                android:id="@+id/tv_item_feeds_title"
+                style="@style/TextAppearance.NYTNewsApp.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{articleExpanded.title}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/item_list_label__text_title_long" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier_section_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="tv_item_feeds_title" />
+
+            <TextView
+                android:id="@+id/tv_item_feeds_section"
+                style="@style/TextAppearance.NYTNewsApp.caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_normal"
+                android:text="@{articleExpanded.section}"
+                app:layout_constraintEnd_toStartOf="@+id/tv_item_feeds_date"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/barrier_section_date"
+                tools:text="@string/item_list_label_section" />
+
+            <TextView
+                android:id="@+id/tv_item_feeds_date"
+                style="@style/TextAppearance.NYTNewsApp.caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_normal"
+                app:layout_constraintStart_toEndOf="@id/tv_item_feeds_section"
+                app:layout_constraintTop_toTopOf="@id/tv_item_feeds_section"
+                tools:text="@string/item_list_label_time" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

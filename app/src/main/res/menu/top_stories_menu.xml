@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/state_saved"
+        android:icon="@drawable/asld_saved_story"
+        android:title="@string/bottom_nav_label_saved"
+        app:showAsAction="ifRoom" />
+</menu>

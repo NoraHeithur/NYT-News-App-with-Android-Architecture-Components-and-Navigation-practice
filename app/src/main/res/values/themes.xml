@@ -1,0 +1,101 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.NYTNewsApps" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/color_navy</item>
+        <item name="colorPrimaryVariant">@color/color_navy_dark</item>
+        <item name="colorOnPrimary">@color/color_mint</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/color_mint</item>
+        <item name="colorSecondaryVariant">@color/color_mint_dark</item>
+        <item name="colorOnSecondary">@color/material_grey_900</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="m">?attr/colorPrimaryVariant</item>
+        <!-- Action mode -->
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeStyle">@style/Widget.NYTNewsApp.ActionMode</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_filter_chip_close</item>
+    </style>
+
+    <!-- Dialog -->
+    <style name="ThemeOverlay.NYTNewsApp.dialog_color" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorPrimary">@color/color_mint_dark</item>
+        <item name="alertDialogStyle">@style/AlertDialog.NYTNewsApp.Style</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/AlertDialog.NYTNewsApp.Title</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/AlertDialog.NYTNewsApp.BodyText</item>
+    </style>
+
+    <!-- Filter Toolbar Theme -->
+    <style name="ThemeOverlay.NYTNewsApp.Toolbar" parent="">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorOnPrimary">@color/black</item>
+    </style>
+
+    <!-- Main Toolbar Theme -->
+    <style name="ThemeOverlay.NYTNewsApp.Toolbar_Main" parent="">
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+
+    <!-- Button -->
+    <style name="ThemeOverlay.NYTNewsApp.Button" parent="">
+        <item name="colorPrimary">@color/color_mint</item>
+        <item name="colorOnPrimary">@color/material_grey_900</item>
+    </style>
+
+    <!-- Colored Bottom Navigation -->
+    <style name="Widget.NYTNewsApp.BottomNavigationView.Colored" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="itemIconTint">@color/custom_mtrl_bottom_nav_color_tint</item>
+        <item name="itemTextColor">@color/custom_mtrl_bottom_nav_color_tint</item>
+    </style>
+
+    <!-- Close filter button -->
+    <style name="Widget.NYTNewsApp.Image.tint" parent="">
+        <item name="tint">@color/black</item>
+    </style>
+
+    <!-- Filter Toolbar -->
+    <style name="Widget.NYTNewsApp.Toolbar.DayLight_Container" parent="Widget.MaterialComponents.Toolbar.Primary">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.NYTNewsApp.Toolbar</item>
+        <item name="titleTextAppearance">@style/TextAppearance.NYTNewsApp.Title</item>
+    </style>
+
+    <!-- Main Toolbar -->
+    <style name="Widget.NYTNewsApp.Toolbar.Main_Appbar" parent="Widget.NYTNewsApp.Toolbar.DayLight_Container">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.NYTNewsApp.Toolbar_Main</item>
+    </style>
+
+    <!-- Tool bar action mode -->
+    <style name="Widget.NYTNewsApp.ActionMode" parent="Widget.AppCompat.ActionMode">
+        <item name="titleTextStyle">@style/TextAppearance.NYTNewsApp.overline.action</item>
+        <item name="subtitleTextStyle">@style/TextAppearance.NYTNewsApp.Body</item>
+        <item name="background">@color/material_grey_800</item>
+    </style>
+
+    <style name="Widget.NYTNewsApp.NavigationView" parent="Widget.MaterialComponents.NavigationView">
+        <item name="itemIconTint">@color/custom_mtrl_nav_view_item_color</item>
+        <item name="titleTextColor">@color/black</item>
+        <item name="itemTextColor">@color/custom_mtrl_nav_view_item_color</item>
+        <item name="itemShapeFillColor">@color/custom_mtrl_nav_view_item_selector</item>
+    </style>
+
+    <style name="Widget.NYTNewsApp.Button.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton" >
+        <item name="android:textColor">@color/custom_mtrl_btn_source_selector</item>
+        <item name="strokeColor">@color/custom_mtrl_btn_source_selector</item>
+        <item name="iconTint">@color/custom_mtrl_btn_source_selector</item>
+    </style>
+
+    <!-- Button -->
+    <style name="Widget.NYTNewsApp.Button" parent="Widget.MaterialComponents.Button">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.NYTNewsApp.Button</item>
+        <item name="textAppearanceButton">@style/TextAppearance.NYTNewsApp.Button</item>
+    </style>
+
+    <!-- Refresh Button -->
+    <style name="Widget.NYTNewsApp.Button.Refresh" parent="Widget.NYTNewsApp.Button">
+        <item name="android:text">@string/button_label_refresh</item>
+        <item name="icon">@drawable/ic_refresh</item>
+        <item name="iconGravity">textStart</item>
+    </style>
+
+</resources>

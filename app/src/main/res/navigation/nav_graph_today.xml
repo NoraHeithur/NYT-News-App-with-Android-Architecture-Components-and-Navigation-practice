@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_today"
+    app:startDestination="@id/navigation_screen_today">
+    <fragment
+        android:id="@+id/navigation_screen_today"
+        android:name="com.nora.nytnewsapps.presentation.screens.today.TodayFragment"
+        android:label="@string/app_bar_label_today"
+        tools:layout="@layout/fragment_today" >
+        <action
+            android:id="@+id/action_navigation_screen_today_to_navigation_screen_newsDetail_one"
+            app:destination="@id/navigation_screen_newsDetail_one" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_screen_newsDetail_one"
+        android:name="com.nora.nytnewsapps.presentation.screens.detail.NewsDetailFragment"
+        android:label="@string/app_bar_label_top_story"
+        tools:layout="@layout/fragment_news_detail" />
+</navigation>
